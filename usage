@@ -1,0 +1,36 @@
+private boolean genderMatch(Node n)
+	{
+		Hashmap<String, String> map = new Hashmap()
+		map.put("NN","singular");
+		map.put("NNP","singular");
+		map.put("he","singular");
+		map.put("she","singular");
+		map.put("him","singular");
+		map.put("her","singular");
+		map.put("it","singular");
+		map.put("himself","singular");
+		map.put("herself","singular");
+		map.put("itself","singular");
+		map.put("NNS","plural");
+		map.put("NNPS","plural");
+		map.put("they","plural");
+		map.put("them","plural");
+		map.put("themselves","plural");
+		map.put("PRP",null);
+
+
+
+		return true;
+	}
+
+	private boolean numberMatch(Node n)
+	{
+
+	}
+	private String getType(Node a) {
+		return a.getData().getFeatures().get("type").toString();
+	}
+
+	private String getString(Node a) {
+		return a.getData().getFeatures().get("string").toString();
+	}
